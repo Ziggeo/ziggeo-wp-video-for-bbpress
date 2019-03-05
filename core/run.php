@@ -103,6 +103,7 @@ function ziggeobbpress_init() {
 
 		$load_assets = true;
 		include_once( ZIGGEOBBPRESS_ROOT_PATH . 'core/toolbar.php');
+
 		add_action('bbp_theme_before_reply_form_content', 'ziggeobbpress_smalltoolbbar');
 	}
 
@@ -110,7 +111,6 @@ function ziggeobbpress_init() {
 		include_once(ZIGGEOBBPRESS_ROOT_PATH . 'core/assets.php');
 	}
 }
-
 
 //Function that we use to run the module 
 function ziggeobbpress_run() {
