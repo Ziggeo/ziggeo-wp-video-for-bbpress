@@ -1,8 +1,8 @@
 <?php
 /*
 Plugin Name: Ziggeo Video for bbPress
-Plugin URI: https://ziggeo.com
-Description: Add the Powerful Ziggeo video service platform to you bbPress forum
+Plugin URI: https://ziggeo.com/integrations/wordpress
+Description: Add the Powerful Ziggeo video service platform to your bbPress forum
 Author: Ziggeo
 Version: 1.0
 Author URI: https://ziggeo.com
@@ -16,7 +16,7 @@ defined('ABSPATH') or die();
 define('ZIGGEOBBPRESS_ROOT_PATH', plugin_dir_path(__FILE__) );
 
 //Setting up the URL so that we can get/built on it later on from the plugin root
-define('ZIGGEOBBPRESS_ROOT_URL', plugins_url() . '/ziggeo-video-for-bbpress/' );
+define('ZIGGEOBBPRESS_ROOT_URL', plugins_url('', __FILE__) . '/');
 
 //plugin version - this way other plugins can get it as well and we will be updating this file for each version change as is
 define('ZIGGEOBBPRESS_VERSION', '1.0');
@@ -27,6 +27,7 @@ include_once(ZIGGEOBBPRESS_ROOT_PATH . 'core/run.php');
 include_once(ZIGGEOBBPRESS_ROOT_PATH . 'admin/dashboard.php');
 include_once(ZIGGEOBBPRESS_ROOT_PATH . 'admin/plugins.php');
 include_once(ZIGGEOBBPRESS_ROOT_PATH . 'admin/validation.php');
+include_once(ZIGGEOBBPRESS_ROOT_PATH . 'core/assets.php');
 
 
 ?>

@@ -91,7 +91,7 @@ defined('ABSPATH') or die();
 		<div>
 			<h2>Ziggeo Video for bbPress</h2>
 
-			<form action="options.php" method="post">
+			<form action="options.php" method="post" class="ziggeobbpress_form">
 				<?php
 				wp_nonce_field('ziggeobbpress_nonce_action', 'ziggeobbpress_video_nonce');
 				get_settings_errors();

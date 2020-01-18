@@ -1,13 +1,16 @@
-=== Ziggeo ===
+=== Ziggeo Video for bbPress ===
 Contributors: oliverfriedmann, baned, carloscsz409
 Tags: ziggeo, video, video forum, video messages, forum, bbpress, community
 Requires at least: 3.0.1
-Tested up to: 5.0.3
+Tested up to: 5.3
 Stable tag: 1.0
+Requires PHP: 5.2.4
 License: GPLv3 or later
 License URI: http://www.gnu.org/licenses/gpl-3.0.html
 
 This plugin brings video player and recorder (including screen recording) to bbPress forum/community by utilizing the powerful and award winning Ziggeo for video.
+
+Please note that you need to install and setup [Ziggeo plugin](https://wordpress.org/plugins/ziggeo/) first. This plugin is offered as an extension of the same.
 
 == Who is this for? ==
 
@@ -25,6 +28,18 @@ Makes it super easy to make your forum all around video. It is also very simple 
 
 == Screenshots ==
 
+= Admin =
+1. Admin dashboard options
+2. bbPress Admin - New Forum form
+3. bbPress Admin - New Topic form
+4. bbPress Admin - New Reply form
+5. bbPress Admin - New Reply form - Add video
+6. bbPress Admin - New Reply form - Add template
+7. bbPress Admin - Forum List
+
+= Public =
+8. bbPress Public - New Topic
+9. bbPress Public - New Topic Reply
 
 == Installation ==
  
@@ -37,13 +52,13 @@ Makes it super easy to make your forum all around video. It is also very simple 
 
 = How does it work? =
 
-The plugin combines and extends the reach of Ziggeo plugin to your bbPress forum. In old ages people would share the links to their videos on various platforms. Often videos get removed, or moved and you end up with different or missing content. With Ziggeo powered recorders and player it is quick, simple and easy to add video to your bbPress forum.
+The plugin combines and extends the reach of Ziggeo plugin to your bbPress forum. In old ages people would share the links to their videos on various platforms. Often videos get removed, or moved and you end up with different or missing content. With Ziggeo powered recorders and player it is quick, simple and easy to add video to your bbPress forum. Plus it allows you to keep in control of your content.
 
 By installing this plugin it offers you few options that allow you to set up how Ziggeo core plugin is used on your bbPress plugin pages.
 
 = Where does integration happen? =
 
-This plugin allows you to pick where the plugin will be integrated to. By default you will allow all community members that see the form to also be able to add the videos in their replies. It is quick and simple and there are many options. From screen recording, video and just audio.
+This plugin allows you to pick where the plugin will be integrated to. By default you will allow all community members that see the form to also be able to add the videos into their replies. It is quick and simple and there are many options. From screen recording, video and just audio.
 
 All you have to do is to set and enjoy it :)
 
@@ -51,11 +66,9 @@ All you have to do is to set and enjoy it :)
 
 We made this in a way that should make it possible to just install and have it work in other bbPress plugins as well. Of course depending on how that plugin works.
 
-We made it work with the *bbPress Enable Tiny MCE Visual Tab* plugin.
+If you want to have it supprot some specific plugin, or you know it supports, let us know.
 
-Do you know some bbPress plugin that it also supports? Great, please let us know :)
-
-Want to add support to some other bbPress plugin? Would be happy to hear about it. Please do let us know using one of the methods mentioned in the _How can I get some support_ section bellow.
+Want to add support to some other bbPress plugin yourself? Would be happy to hear about it. Please do let us know using one of the methods mentioned in the _How can I get some support_ section bellow.
 
 = How can I get some support =
 

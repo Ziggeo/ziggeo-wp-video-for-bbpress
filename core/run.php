@@ -64,9 +64,6 @@ function ziggeobbpress_init() {
 
 	$options = get_option('ziggeobbpress');
 
-	//load assets
-	$load_assets = false;
-
 	//Defaults
 	if($options === false || $options === '') {
 		$options = array(
@@ -78,38 +75,45 @@ function ziggeobbpress_init() {
 		);
 	}
 
-	//Parse videos on
+	//If admin, lets make sure we show it there as well
+	//Add Record Video button
+	if(is_admin()) {
+		//This runs the call similar to media_buttons, and creates our own buttons in the post editor.
+		add_filter( 'edit_form_after_title', 'ziggeo_p_pre_editor' );
+	}
+
+	//Parse videos on?
 
 	if($options['on_forum'] === 1) {
 		//parse embeddings in forum
-		$load_assets = true;
 		add_filter('bbp_get_forum_content', 'ziggeo_p_content_filter');
 	}
 
 	if($options['on_topic'] === 1) {
 		//parse embeddings in topic
-		$load_assets = true;
 		add_filter('bbp_get_topic_content', 'ziggeo_p_content_filter');
 	}
 
 	if($options['on_reply'] === 1) {
 		//parse embeddings in replies
-		$load_assets = true;
 		add_filter('bbp_get_reply_content', 'ziggeo_p_content_filter');
 	}
+
 
 	if( (isset($options['public_recorder']) && (int)$options['public_recorder'] === 1) ||
 		(isset($options['public_screen']) && (int)$options['public_screen'] === 1) ) {
 
-		$load_assets = true;
+		//This is all public side. If you want to add toolbar anywhere else, you can just include it as follows into your script and call ziggeobbpress_smalltoolbbar()
 		include_once( ZIGGEOBBPRESS_ROOT_PATH . 'core/toolbar.php');
 
+		//When replying on the topic
 		add_action('bbp_theme_before_reply_form_content', 'ziggeobbpress_smalltoolbbar');
+		//When creating topics
+		add_action('bbp_theme_before_topic_form', 'ziggeobbpress_smalltoolbbar');
+		//When form for creating forum is shown
+		add_action('bbp_theme_before_forum_form', 'ziggeobbpress_smalltoolbbar');
 	}
 
-	if($load_assets === true) {
-		include_once(ZIGGEOBBPRESS_ROOT_PATH . 'core/assets.php');
-	}
 }
 
 //Function that we use to run the module 
