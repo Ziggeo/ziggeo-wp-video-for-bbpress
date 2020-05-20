@@ -7,7 +7,7 @@ defined('ABSPATH') or die();
 	//Adds a small public facing toolbar to make it easy to record and reply back with video on forum
 	function ziggeobbpress_smalltoolbbar() {
 
-		$options = get_option('ziggeobbpress');
+		$options = ziggeobbpress_get_plugin_options();
 
 		if(isset($options['public_recorder']) && (int)$options['public_recorder'] === 1) {
 			//Add video recording

@@ -62,18 +62,7 @@ function ziggeobbpress_get_version() {
 //We add all of the hooks we need
 function ziggeobbpress_init() {
 
-	$options = get_option('ziggeobbpress');
-
-	//Defaults
-	if($options === false || $options === '') {
-		$options = array(
-			'on_forum' 			=> 1,
-			'on_topic' 			=> 1,
-			'on_reply' 			=> 1,
-			'public_recorder'	=> 1,
-			'public_screen'		=> 1
-		);
-	}
+	$options = ziggeobbpress_get_plugin_options();
 
 	//If admin, lets make sure we show it there as well
 	//Add Record Video button

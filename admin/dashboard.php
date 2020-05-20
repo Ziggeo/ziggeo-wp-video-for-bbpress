@@ -112,71 +112,51 @@ defined('ABSPATH') or die();
 		}
 
 			function ziggeobbpress_o_forum_content() {
-				$options = get_option('ziggeobbpress');
-
-				if(!isset($options['on_forum']) ) {
-					$options['on_forum'] = '1';
-				}
+				$option = ziggeobbpress_get_plugin_options('on_forum');
 
 				?>
 				<input id="ziggeobbpress_on_forum" name="ziggeobbpress[on_forum]" size="50" type="checkbox" value="1"
-					<?php echo checked( 1, $options['on_forum'], false ); ?> />
+					<?php echo checked( 1, $option, false ); ?> />
 				<label for="ziggeobbpress_on_forum"><?php _e('When checked your forum description will be processed for Ziggeo templates or shortcodes', 'ziggeobbpress'); ?></label>
 				<?php
 			}
 
 			function ziggeobbpress_o_topic_content() {
-				$options = get_option('ziggeobbpress');
-
-				if(!isset($options['on_topic']) ) {
-					$options['on_topic'] = '1';
-				}
+				$option = ziggeobbpress_get_plugin_options('on_topic');
 
 				?>
 				<input id="ziggeobbpress_on_topic" name="ziggeobbpress[on_topic]" size="50" type="checkbox" value="1"
-					<?php echo checked( 1, $options['on_topic'], false ); ?> />
+					<?php echo checked( 1, $option, false ); ?> />
 				<label for="ziggeobbpress_on_topic"><?php _e('When checked your topic description will be processed for Ziggeo templates or shortcodes', 'ziggeobbpress'); ?></label>
 				<?php
 			}
 
 			function ziggeobbpress_o_reply_content() {
-				$options = get_option('ziggeobbpress');
-
-				if(!isset($options['on_reply']) ) {
-					$options['on_reply'] = '1';
-				}
+				$option = ziggeobbpress_get_plugin_options('on_reply');
 
 				?>
 				<input id="ziggeobbpress_on_reply" name="ziggeobbpress[on_reply]" size="50" type="checkbox" value="1"
-					<?php echo checked( 1, $options['on_reply'], false ); ?> />
+					<?php echo checked( 1, $option, false ); ?> />
 				<label for="ziggeobbpress_on_reply"><?php _e('When checked your topic repies will be processed for Ziggeo templates or shortcodes', 'ziggeobbpress'); ?></label>
 				<?php
 			}
 
 			function ziggeobbpress_o_public_recorder() {
-				$options = get_option('ziggeobbpress');
-
-				if(!isset($options['public_recorder']) ) {
-					$options['public_recorder'] = '1';
-				}
+				$option = ziggeobbpress_get_plugin_options('public_recorder');
 
 				?>
 				<input id="ziggeobbpress_public_recorder" name="ziggeobbpress[public_recorder]" size="50" type="checkbox" value="1"
-					<?php echo checked( 1, $options['public_recorder'], false ); ?> />
+					<?php echo checked( 1, $option, false ); ?> />
 				<label for="ziggeobbpress_public_recorder"><?php _e('When checked your toolbar above reply form gets recorder button allowing anyone to add video to their reply.', 'ziggeobbpress'); ?></label>
 				<?php
 			}
 
 			function ziggeobbpress_o_public_screen() {
-				$options = get_option('ziggeobbpress');
-
-				if(!isset($options['public_screen']) ) {
-					$options['public_screen'] = '1';
-				}
+				$option = ziggeobbpress_get_plugin_options('public_screen');
 
 				?>
 				<input id="ziggeobbpress_public_screen" name="ziggeobbpress[public_screen]" size="50" type="checkbox" value="1"
-					<?php echo checked( 1, $options['public_screen'], false ); ?> />
+					<?php echo checked( 1, $option, false ); ?> />
 				<label for="ziggeobbpress_public_screen"><?php _e('When checked your toolbar above reply form gets screen recorder button allowing anyone to add video of their screen to their reply.', 'ziggeobbpress'); ?></label>
 				<?php
 			}
