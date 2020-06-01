@@ -17,7 +17,7 @@
 		"latest_update": "Batter handling of initial option values and their use later on.",
 		"info_url": "https://raw.githubusercontent.com/Ziggeo/ziggeo-wp-video-for-bbpress/master/info.json",
 		"addon_url": "https://ziggeo.com/integrations/wordpress/bbpress",
-		"docs_url": "https://ziggeo.com/docs/integrations/wordpress/bbpress",
+		"docs_url": "https://ziggeo.com/docs/integrations/wordpress/bbpress"
 	},
 	"legal": {
 		"terms_of_use": "https://ziggeo.com/terms",
