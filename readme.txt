@@ -2,8 +2,8 @@
 Contributors: oliverfriedmann, baned, carloscsz409
 Tags: ziggeo, video, video forum, video messages, forum, bbpress, community
 Requires at least: 3.0.1
-Tested up to: 5.4.1
-Stable tag: 1.1
+Tested up to: 5.4.2
+Stable tag: 1.2
 Requires PHP: 5.2.4
 License: GPLv3 or later
 License URI: http://www.gnu.org/licenses/gpl-3.0.html
@@ -81,10 +81,14 @@ Please go to our [WordPress forum](https://support.ziggeo.com/hc/en-us/community
 
 == Upgrade Notice ==
 
-= 1.1 =
-* Batter handling of initial option values and their use later on.
+= 1.2 =
+* Utilizing new way to add the link for plugin settings.
+* Also includes support for Addons page in Ziggeo core plugin
 
 == Changelog ==
+
+= 1.1 =
+* Better handling of initial option values and their use later on.
 
 = 1.0 =
 Initial commit

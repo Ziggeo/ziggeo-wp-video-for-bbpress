@@ -8,7 +8,7 @@
 	"plugin": {
 		"name": "ziggeo-video-for-bbpress",
 		"title": "Ziggeo Video for bbPress",
-		"version": "1.1",
+		"version": "1.2",
 		"author": "Ziggeo",
 		"logo": "https://raw.githubusercontent.com/Ziggeo/ziggeo-wp-video-for-bbpress/master/assets/images/logo.png",
 		"contributors": "oliverfriedmann, baned, carloscsz409",

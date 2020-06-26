@@ -68,15 +68,14 @@ defined('ABSPATH') or die();
 	});
 
 	add_action('admin_menu', function() {
-		add_submenu_page(
-			'ziggeo_video',					//parent slug
-			'Ziggeo Video for bbPress',		//page title
-			'Ziggeo Video for bbPress',		//menu title
-			'manage_options',				//min capability to view
-			'ziggeobbpress',				//menu slug
-			'ziggeobbpress_show_form'		//function
+		ziggeo_p_add_addon_submenu(array(
+			'page_title'	=> 'Ziggeo Video for bbPress',		//page title
+			'menu_title'	=> 'Ziggeo Video for bbPress',		//menu title
+			'capability'	=> 'manage_options',					//min capability to view
+			'slug'			=> 'ziggeobbpress',						//menu slug
+			'callback'		=> 'ziggeobbpress_show_form')				//function
 		);
-	});
+	}, 12);
 
 
 
