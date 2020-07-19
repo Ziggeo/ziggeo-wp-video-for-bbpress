@@ -1,5 +1,5 @@
 === Ziggeo Video for bbPress ===
-Contributors: oliverfriedmann, baned, carloscsz409
+Contributors: oliverfriedmann, baned, carloscsz409, natashacalleia
 Tags: ziggeo, video, video forum, video messages, forum, bbpress, community
 Requires at least: 3.0.1
 Tested up to: 5.4.2
