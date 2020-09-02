@@ -4,7 +4,7 @@ Plugin Name: Ziggeo Video for bbPress
 Plugin URI: https://ziggeo.com/integrations/wordpress
 Description: Add the Powerful Ziggeo video service platform to your bbPress forum
 Author: Ziggeo
-Version: 1.2
+Version: 1.3
 Author URI: https://ziggeo.com
 */
 
@@ -19,7 +19,7 @@ define('ZIGGEOBBPRESS_ROOT_PATH', plugin_dir_path(__FILE__) );
 define('ZIGGEOBBPRESS_ROOT_URL', plugins_url('', __FILE__) . '/');
 
 //plugin version - this way other plugins can get it as well and we will be updating this file for each version change as is
-define('ZIGGEOBBPRESS_VERSION', '1.2');
+define('ZIGGEOBBPRESS_VERSION', '1.3');
 
 //Include files
 include_once(ZIGGEOBBPRESS_ROOT_PATH . 'core/simplifiers.php');

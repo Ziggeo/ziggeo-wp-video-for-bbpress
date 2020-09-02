@@ -68,13 +68,25 @@ defined('ABSPATH') or die();
 	});
 
 	add_action('admin_menu', function() {
-		ziggeo_p_add_addon_submenu(array(
-			'page_title'	=> 'Ziggeo Video for bbPress',		//page title
-			'menu_title'	=> 'Ziggeo Video for bbPress',		//menu title
-			'capability'	=> 'manage_options',					//min capability to view
-			'slug'			=> 'ziggeobbpress',						//menu slug
-			'callback'		=> 'ziggeobbpress_show_form')				//function
-		);
+		if(function_exists('ziggeo_p_add_addon_submenu')) {
+			ziggeo_p_add_addon_submenu(array(
+				'page_title'    => 'Ziggeo Video for bbPress',      //page title
+				'menu_title'    => 'Ziggeo Video for bbPress',      //menu title
+				'capability'    => 'manage_options',                //min capability to view
+				'slug'          => 'ziggeobbpress',                 //menu slug
+				'callback'      => 'ziggeobbpress_show_form')       //function
+			);
+		}
+		else {
+			add_action( 'admin_notices', function() {
+
+				?>
+				<div class="error notice">
+					<p><?php _e( 'Please install <a href="https://wordpress.org/plugins/ziggeo/">Ziggeo plugin</a>. It is required for this plugin (Videowalls for Ziggeo) to work properly!', 'ziggeobbpress' ); ?></p>
+				</div>
+				<?php
+			});
+		}
 	}, 12);
 
 
