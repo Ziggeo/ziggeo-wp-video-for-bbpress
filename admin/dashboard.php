@@ -33,38 +33,38 @@ defined('ABSPATH') or die();
 
 			// 
 			add_settings_field('ziggeobbpress_forum_content',
-								__('Use Ziggeo within forum description', 'ziggeobbpress'),
-								'ziggeobbpress_o_forum_content',
-								'ziggeobbpress',
-								'ziggeobbpress_section_hooks');
+			                    __('Use Ziggeo within forum description', 'ziggeobbpress'),
+			                    'ziggeobbpress_o_forum_content',
+			                    'ziggeobbpress',
+			                    'ziggeobbpress_section_hooks');
 
 			// 
 			add_settings_field('ziggeobbpress_topic_content',
-								__('Use Ziggeo within topic description', 'ziggeobbpress'),
-								'ziggeobbpress_o_topic_content',
-								'ziggeobbpress',
-								'ziggeobbpress_section_hooks');
+			                    __('Use Ziggeo within topic description', 'ziggeobbpress'),
+			                    'ziggeobbpress_o_topic_content',
+			                    'ziggeobbpress',
+			                    'ziggeobbpress_section_hooks');
 
 			// 
 			add_settings_field('ziggeobbpress_reply_content',
-								__('Use Ziggeo within reply description', 'ziggeobbpress'),
-								'ziggeobbpress_o_reply_content',
-								'ziggeobbpress',
-								'ziggeobbpress_section_hooks');
+			                    __('Use Ziggeo within reply description', 'ziggeobbpress'),
+			                    'ziggeobbpress_o_reply_content',
+			                    'ziggeobbpress',
+			                    'ziggeobbpress_section_hooks');
 
 			// 
 			add_settings_field('ziggeobbpress_public_recorder',
-								__('Show video recorder for public replies (by anyone seeing form)', 'ziggeobbpress'),
-								'ziggeobbpress_o_public_recorder',
-								'ziggeobbpress',
-								'ziggeobbpress_section_hooks');
+			                    __('Show video recorder for public replies (by anyone seeing form)', 'ziggeobbpress'),
+			                    'ziggeobbpress_o_public_recorder',
+			                    'ziggeobbpress',
+			                    'ziggeobbpress_section_hooks');
 
 			// 
 			add_settings_field('ziggeobbpress_public_screen',
-								__('Show screen recorder for public replies (by anyone seeing form)', 'ziggeobbpress'),
-								'ziggeobbpress_o_public_screen',
-								'ziggeobbpress',
-								'ziggeobbpress_section_hooks');
+			                    __('Show screen recorder for public replies (by anyone seeing form)', 'ziggeobbpress'),
+			                    'ziggeobbpress_o_public_screen',
+			                    'ziggeobbpress',
+			                    'ziggeobbpress_section_hooks');
 	});
 
 	add_action('admin_menu', function() {
@@ -79,10 +79,9 @@ defined('ABSPATH') or die();
 		}
 		else {
 			add_action( 'admin_notices', function() {
-
 				?>
 				<div class="error notice">
-					<p><?php _e( 'Please install <a href="https://wordpress.org/plugins/ziggeo/">Ziggeo plugin</a>. It is required for this plugin (Videowalls for Ziggeo) to work properly!', 'ziggeobbpress' ); ?></p>
+					<p><?php _e( 'Please install <a href="https://wordpress.org/plugins/ziggeo/">Ziggeo plugin</a>. It is required for this plugin (Ziggeo Video For bbPress) to work properly!', 'ziggeobbpress' ); ?></p>
 				</div>
 				<?php
 			});
