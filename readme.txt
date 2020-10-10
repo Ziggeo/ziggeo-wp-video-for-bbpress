@@ -81,11 +81,14 @@ Please go to our [WordPress forum](https://support.ziggeo.com/hc/en-us/community
 
 == Upgrade Notice ==
 
+= 1.4 =
+* Improvement: Plugin will now look for the global integrations recorder and use its parameter to create its recorder
+
+== Changelog ==
+
 = 1.3 =
 * Improvement: Made Dashboard page creation for settings only work if the Ziggeo core plugin is installed with newer version supporting the call, helping avoid hidden error if it is not.
 * Improvement: Added a check if core plugin is installed and available. If not, instead of silent fail, show warning.
-
-== Changelog ==
 
 = 1.2 =
 * Utilizing new way to add the link for plugin settings.
