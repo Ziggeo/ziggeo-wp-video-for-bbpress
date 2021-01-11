@@ -71,6 +71,14 @@
 				themecolor: "red"
 		};
 
+		//ZiggeoWP.integrations_code_recorder
+		//[ziggeorecorder onlyaudio='true']
+		/*_attrs = ZiggeoWP.integrations_code_recorder.replace(/=/g, ':').replace(/'true'/g,'true').replace('[ziggeorecorder ', '').replace(']', '').replace(/ /g, ';');
+
+		if(!_attrs.width) {
+			_attrs.width = '100%';
+		}*/
+
 		if(type !== null && typeof type !== 'undefined') {
 			if(type === 'screen') {
 				_attrs.allowscreen = true;
@@ -90,7 +98,24 @@
 
 			code = code.match(/(?:[^\s']+|'[^\']*\')+/g);
 
-			_attrs = code;
+			//We have a n->property array with string values
+
+			for(i = 0, l = code.length; i < l; i++) {
+
+				var _prop = code[i].split(':');
+
+				if(typeof _prop[1] === 'undefined') {
+					_prop[1] = true;
+				}
+				else {
+					//To remove things like "'false'"
+					//thanks: https://stackoverflow.com/a/32516190
+					_prop[1] = _prop[1].replace(/^\'+|\'+$/g, '');
+				}
+
+				_attrs[_prop[0]] = _prop[1];
+			}
+
 		}
 
 		//create recorder using v2 recorder code
@@ -98,6 +123,22 @@
 		element: document.getElementById('ziggeo-video-screen'),
 			attrs: _attrs
 		});
+
+		//To place the recorder in the middle of the screen
+		if(_attrs.width) {
+			var _width = _attrs.width;
+			var _height = _attrs.height;
+
+			if(typeof _attrs.width === 'string') {
+				var _width = _attrs.width.replace('%', '').replace('px', '');
+			}
+			if(typeof _attrs.height === 'string') {
+				var _height = _attrs.height.replace('%', '').replace('px', '');
+			}
+
+			document.getElementById('ziggeo-video-screen').style.left = 'calc(50% - ' + (_width / 2) + 'px)';
+			document.getElementById('ziggeo-video-screen').style.top = 'calc(50% - ' + (_height / 2) + 'px)';
+		}
 
 		recorder.activate();
 

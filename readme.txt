@@ -2,8 +2,8 @@
 Contributors: oliverfriedmann, baned, carloscsz409, natashacalleia
 Tags: ziggeo, video, video forum, video messages, forum, bbpress, community
 Requires at least: 3.0.1
-Tested up to: 5.4.2
-Stable tag: 1.3
+Tested up to: 5.6
+Stable tag: 1.5
 Requires PHP: 5.2.4
 License: GPLv3 or later
 License URI: http://www.gnu.org/licenses/gpl-3.0.html
@@ -81,10 +81,13 @@ Please go to our [WordPress forum](https://support.ziggeo.com/hc/en-us/community
 
 == Upgrade Notice ==
 
-= 1.4 =
-* Improvement: Plugin will now look for the global integrations recorder and use its parameter to create its recorder
+= 1.5 =
+* Fix: bbPress is now respecting the integrations template that you set in setting. It is also properly processing different types of parameters found in the template code.
 
 == Changelog ==
+
+= 1.4 =
+* Improvement: Plugin will now look for the global integrations recorder and use its parameter to create its recorder
 
 = 1.3 =
 * Improvement: Made Dashboard page creation for settings only work if the Ziggeo core plugin is installed with newer version supporting the call, helping avoid hidden error if it is not.
