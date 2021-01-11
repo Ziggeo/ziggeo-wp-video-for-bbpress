@@ -71,14 +71,6 @@
 				themecolor: "red"
 		};
 
-		//ZiggeoWP.integrations_code_recorder
-		//[ziggeorecorder onlyaudio='true']
-		/*_attrs = ZiggeoWP.integrations_code_recorder.replace(/=/g, ':').replace(/'true'/g,'true').replace('[ziggeorecorder ', '').replace(']', '').replace(/ /g, ';');
-
-		if(!_attrs.width) {
-			_attrs.width = '100%';
-		}*/
-
 		if(type !== null && typeof type !== 'undefined') {
 			if(type === 'screen') {
 				_attrs.allowscreen = true;
