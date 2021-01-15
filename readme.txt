@@ -81,6 +81,9 @@ Please go to our [WordPress forum](https://support.ziggeo.com/hc/en-us/community
 
 == Upgrade Notice ==
 
+= 1.6 =
+* Support: Added support for Medium editor used by the BuddyBoss with bbPress.
+
 = 1.5 =
 * Fix: bbPress is now respecting the integrations template that you set in setting. It is also properly processing different types of parameters found in the template code.
 

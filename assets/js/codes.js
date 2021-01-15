@@ -32,9 +32,18 @@
 					if(_textelement.style.display === 'none') {
 						//So now we know that the TinyMCe editor is enabled and that it is the one that is currently active
 						tinyMCE.activeEditor.setContent( tinyMCE.activeEditor.getContent() + '[ziggeoplayer]' +
-																								embedding.get('video') +
-																							'[/ziggeoplayer]');
+						                                                                        embedding.get('video') +
+						                                                                      '[/ziggeoplayer]');
 						return true;
+					}
+				}
+				//Medium editor support
+				else if(MediumEditor) {
+					var editor = MediumEditor.getEditorFromElement(_textelement.previousElementSibling);
+					if(editor) {
+						editor.pasteHTML('[ziggeoplayer]' +
+						                    embedding.get('video') +
+						                 '[/ziggeoplayer]');
 					}
 				}
 
