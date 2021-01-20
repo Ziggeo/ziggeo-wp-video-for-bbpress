@@ -3,7 +3,7 @@ Contributors: oliverfriedmann, baned, carloscsz409, natashacalleia
 Tags: ziggeo, video, video forum, video messages, forum, bbpress, community
 Requires at least: 3.0.1
 Tested up to: 5.6
-Stable tag: 1.5
+Stable tag: 1.6.1
 Requires PHP: 5.2.4
 License: GPLv3 or later
 License URI: http://www.gnu.org/licenses/gpl-3.0.html
@@ -81,13 +81,16 @@ Please go to our [WordPress forum](https://support.ziggeo.com/hc/en-us/community
 
 == Upgrade Notice ==
 
+= 1.6.1 =
+* Improvement: Medium editor update is now done differently to provide better support for the same
+
+== Changelog ==
+
 = 1.6 =
 * Support: Added support for Medium editor used by the BuddyBoss with bbPress.
 
 = 1.5 =
 * Fix: bbPress is now respecting the integrations template that you set in setting. It is also properly processing different types of parameters found in the template code.
-
-== Changelog ==
 
 = 1.4 =
 * Improvement: Plugin will now look for the global integrations recorder and use its parameter to create its recorder

@@ -28,7 +28,9 @@
 			}
 
 			if(_textelement !== null) {
-				if(_textelement.previousSibling && _textelement.previousSibling.className.indexOf('mce-tinymce') > -1) {
+				if(_textelement.previousSibling &&
+				   typeof _textelement.previousSibling.className !== 'undefined' &&
+				   _textelement.previousSibling.className.indexOf('mce-tinymce') > -1) {
 					if(_textelement.style.display === 'none') {
 						//So now we know that the TinyMCe editor is enabled and that it is the one that is currently active
 						tinyMCE.activeEditor.setContent( tinyMCE.activeEditor.getContent() + '[ziggeoplayer]' +
@@ -41,7 +43,8 @@
 				else if(MediumEditor) {
 					var editor = MediumEditor.getEditorFromElement(_textelement.previousElementSibling);
 					if(editor) {
-						editor.pasteHTML('[ziggeoplayer]' +
+						editor.setContent(editor.getContent() +
+						                 '[ziggeoplayer]' +
 						                    embedding.get('video') +
 						                 '[/ziggeoplayer]');
 					}
