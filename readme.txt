@@ -2,7 +2,7 @@
 Contributors: oliverfriedmann, baned, carloscsz409, natashacalleia
 Tags: ziggeo, video, video forum, video messages, forum, bbpress, community
 Requires at least: 3.0.1
-Tested up to: 5.8.3
+Tested up to: 6.1.1
 Stable tag: 1.6.1
 Requires PHP: 5.2.4
 License: GPLv3 or later
